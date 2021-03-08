@@ -19,7 +19,7 @@
         <activity android:name=".Payment" />
         <activity android:name=".Activity_RegisterNow" />
         <activity android:name=".Activity_UploadFile" />
-        <activity android:name=".Activity_SubmitFile" />
+<!--        <activity android:name=".Activity_SubmitFile" />-->
         <activity android:name=".Activity_Submit" />
         <activity android:name=".ForgotPassword"
             android:screenOrientation="portrait">
