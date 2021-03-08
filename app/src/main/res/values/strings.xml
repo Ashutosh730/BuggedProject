@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mic</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Verify_Mail">Please verify the link in  <b>inbox </b></string>
+    <string name="Reset_password_link">Reset <b>Password Link </b> has been sent on the Email Address</string>
+    <string name="Reset">Click on the <b>Reset Button</b> to create new password to secure your account </string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/buttonAppBarHome"
+        android:icon="@drawable/ic_header_home_logo"
+        app:showAsAction="always"
+        android:title="Home" />
+
+<!--    <item-->
+<!--        android:id="@+id/buttonAppBarStat"-->
+<!--        android:icon="@drawable/ic_header_stat_logo"-->
+<!--        app:showAsAction="always"-->
+<!--        android:title="Stat" />-->
+
+    <item
+        android:id="@+id/buttonAppBarMic"
+        android:title="Mic"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_header_mic_logo"/>
+
+    <item
+        android:id="@+id/buttonAppBarProfile"
+        android:icon="@drawable/ic_header_profile_logo"
+        app:showAsAction="always"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/buttonAppBarMenu"
+        android:icon="@drawable/ic_header_menu_logo"
+        app:showAsAction="always"
+        android:title="Menu" />
+
+</menu>
