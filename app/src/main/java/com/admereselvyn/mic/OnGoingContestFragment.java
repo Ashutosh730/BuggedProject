@@ -64,7 +64,6 @@ public class OnGoingContestFragment extends Fragment {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-
                         try {
 
                             String status = response.getString("status");
@@ -86,8 +85,7 @@ public class OnGoingContestFragment extends Fragment {
                                     contest.setStartContest(jsonObject.getString("start_contest"));
                                     contest.setEndContest(jsonObject.getString("end_contest"));
                                     contest.setFees(jsonObject.getInt("fees"));
-                                    contest.setV(jsonObject.getInt("_v"));
-
+                                    contest.setV(jsonObject.getInt("__v"));
                                     // Adding fetched data to the contestList variable
                                     contestList.add(contest);
 
