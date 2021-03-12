@@ -20,13 +20,13 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp">
 
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:id="@+id/mySubmission"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            style="@style/TextAppearance.AppCompat.Body1"-->
-<!--            android:text="Video"-->
-<!--            app:tabTextColor="@color/black" />-->
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mySubmission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="Video"
+            app:tabTextColor="@color/black" />
 
         <!--   This section will be for Audio
         <com.google.android.material.tabs.TabItem

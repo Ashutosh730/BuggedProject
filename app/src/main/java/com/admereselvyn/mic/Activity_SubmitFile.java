@@ -39,7 +39,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class Activity_SubmitFile extends AppCompatActivity {
-
+    private static final String TAG = "Activity_SubmitFile";
     private TextView contestName, startDate, endDate, fee;
     private Button btn_submitFile;
     private ImageView bannerImage;
@@ -84,7 +84,7 @@ public class Activity_SubmitFile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 uploadFile();
-                openRegistrationActivity();
+
             }
         });
 
@@ -101,7 +101,7 @@ public class Activity_SubmitFile extends AppCompatActivity {
     private void uploadFile(){
 
         Api api = new CoreApiDetails();
-        String upload_URL = api.getUploadVideoToContest(userData.getId());
+        String upload_URL = api.getUploadVideoToContest(contest.getId(),userData.getId());
         String fileName = String.valueOf(Calendar.getInstance().getTimeInMillis()+".mp4");
 
         OkHttpClient client = new OkHttpClient().newBuilder()
@@ -118,11 +118,26 @@ public class Activity_SubmitFile extends AppCompatActivity {
                 .addHeader("Content-Type", "application/json")
                 .build();
 
-        try {
-            Response response = client.newCall(request).execute();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        new Thread() {
+            @Override
+            public void run() {
+                Log.d(TAG, "uploadFile: "+ upload_URL + " " + userData.getId() + " " + contest.getId());
+                Response response = null;
+                try {
+                    response = client.newCall(request).execute();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                assert response != null;
+                if(response.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Upload Successful",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Error " + response.code(),Toast.LENGTH_SHORT).show();
+                }
+                openRegistrationActivity();
+            }
+        }.start();
 
     }
 

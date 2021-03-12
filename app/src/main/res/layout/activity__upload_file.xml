@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,18 +18,18 @@
         android:src="@drawable/gen_contest_img"
         android:scaleType="fitXY"/>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".75"
+        android:layout_marginTop="100dp"
         android:background="@drawable/homescreen_linear_layout_design"
         android:orientation="vertical"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/uploadFile_bannerImg">
+        app:layout_constraintTop_toTopOf="@+id/uploadFile_bannerImg">
 
         <TextView
             android:id="@+id/uploadFile_contestName"
@@ -155,7 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Uplaod Your Video Here"
+                    android:text="Upload Your Video Here"
                     android:textStyle="bold" />
 
                 <TextView
@@ -217,5 +218,6 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

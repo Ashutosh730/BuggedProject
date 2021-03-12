@@ -91,8 +91,8 @@ public class CoreApiDetails implements Api {
     }
 
     @Override
-    public String getUploadVideoToContest(String id) {
-        return apiRoutes.get(uploadVideoToContest) + id;
+    public String getUploadVideoToContest(String contestId ,String id) {
+        return apiRoutes.get(uploadVideoToContest) + contestId + "/user/" + id;
     }
 }
 

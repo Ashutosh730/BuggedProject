@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class UpComingContestFragment extends Fragment {
-
+    private static final String TAG = "UpComingContestFragment";
     // Declaration of variables...
     private RecyclerView all_contest_recyclerView;
     private List<Contest> contestList;
@@ -47,7 +47,7 @@ public class UpComingContestFragment extends Fragment {
         // Initialization of variables...
         all_contest_recyclerView = view.findViewById(R.id.all_upcoming_contest_recyclerView);
         contestList = new ArrayList<>();
-
+        extractAllContest(view);
         return  view;
     }
 
@@ -84,7 +84,8 @@ public class UpComingContestFragment extends Fragment {
                                     contest.setStartContest(jsonObject.getString("start_contest"));
                                     contest.setEndContest(jsonObject.getString("end_contest"));
                                     contest.setFees(jsonObject.getInt("fees"));
-//                                contest.setV(jsonObject.getInt("_v"));
+                                    contest.setV(jsonObject.getInt("__v"));
+                                    contest.setId(jsonObject.getString("_id"));
 
                                     // Adding fetched data to the contestList variable
                                     contestList.add(contest);
@@ -124,6 +125,7 @@ public class UpComingContestFragment extends Fragment {
 
     private void openRegistrationActivity(int position, List<Contest> contestList){
         Intent i = new Intent(getActivity(), Activity_RegisterNow.class);
+        Log.d(TAG, "openRegistrationActivity: " + contestList.get(position).getName() + " ") ;
         i.putExtra("ContestDetails", contestList.get(position));
         startActivity(i);
         ((Activity) getActivity()).overridePendingTransition(0, 0);
