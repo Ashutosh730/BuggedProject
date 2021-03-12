@@ -177,7 +177,7 @@ public class Login extends AppCompatActivity {
                                 editor.apply();
                                 SharedPreferences sharedpreferences1 = getSharedPreferences("logged", MODE_PRIVATE);
                                 SharedPreferences.Editor editor1 = sharedpreferences1.edit();
-                                editor1.putBoolean("isLoggedIn",true);
+                                editor1.putBoolean("logged",true);
                                 editor1.apply();
 
                             }else{
