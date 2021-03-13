@@ -118,12 +118,14 @@ public class Activity_SubmitFile extends AppCompatActivity {
                 .addHeader("Content-Type", "application/json")
                 .build();
 
-        try {
-            Response response = client.newCall(request).execute();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        Thread thread = new Thread(() -> {
+            try  {
+                Response response = client.newCall(request).execute();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        thread.start();
     }
 
 }
