@@ -47,6 +47,7 @@ public class UpComingContestFragment extends Fragment {
         // Initialization of variables...
         all_contest_recyclerView = view.findViewById(R.id.all_upcoming_contest_recyclerView);
         contestList = new ArrayList<>();
+        extractAllContest(view);
 
         return  view;
     }

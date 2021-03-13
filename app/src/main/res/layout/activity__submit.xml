@@ -17,106 +17,112 @@
         android:src="@drawable/gen_contest_img"
         android:scaleType="fitXY"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".75"
-        android:orientation="vertical"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
-        android:background="@drawable/homescreen_linear_layout_design"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@id/submit_bannerImg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/submit_contestName"
-            style="@style/TextAppearance.MaterialComponents.Headline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="24dp"
-            android:text="Rap Battle"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-        <TextView
-            style="@style/TextAppearance.MaterialComponents.Headline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:gravity="center"
-            android:text="User Details"
-            android:textColor="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:layout_marginTop="12dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:background="@drawable/homescreen_linear_layout_design">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/submit_name"
+            <TextView
+                android:id="@+id/submit_contestName"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:text="Rap Battle"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="User Details"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                />
+                android:hint="Name"
+                android:layout_marginTop="12dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/submit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:layout_marginTop="12dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/submit_email"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                />
+                android:hint="Email"
+                android:layout_marginTop="12dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/submit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contact Number"
-            android:layout_marginTop="12dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/submit_contactNumber"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:hint="Contact Number"
+                android:layout_marginTop="12dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/submit_contactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
                 style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_submit"
-            style="@style/TextAppearance.MaterialComponents.Subtitle1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/button_background"
-            android:gravity="center"
-            android:paddingLeft="48dp"
-            android:paddingRight="48dp"
-            android:text="Submit"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
