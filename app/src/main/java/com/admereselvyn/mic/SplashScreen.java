@@ -50,26 +50,26 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
 
                 //Commented code for Onboarding Screen
-//                 pref = getSharedPreferences("ActivityPREF", Context.MODE_PRIVATE);
-//                boolean firstTime = pref.getBoolean("firstTime", true);
-//
-//                if(firstTime){
-//
-//                    SharedPreferences.Editor ed = pref.edit();
-//                    ed.putBoolean("firstTime", false);
-//                    ed.apply();
+                 pref = getSharedPreferences("ActivityPREF", Context.MODE_PRIVATE);
+                boolean firstTime = pref.getBoolean("firstTime", true);
+
+                if(firstTime){
+
+                    SharedPreferences.Editor ed = pref.edit();
+                    ed.putBoolean("firstTime", false);
+                    ed.apply();
 
                     Intent intent = new Intent(getApplicationContext(), OnBoardingScreen.class);
                     startActivity(intent);
+                     finish();
+
+                }else {
+
+                    Intent i=new Intent(getApplicationContext(), Login.class);
+                    startActivity(i);
+                    customType(SplashScreen.this,"fadein-to-fadeout");//This will create animation
                     finish();
-//
-//                } else {
-//
-//                    Intent i=new Intent(getApplicationContext(), Login.class);
-//                    startActivity(i);
-//                    customType(SplashScreen.this,"fadein-to-fadeout");//This will create animation
-//                    finish();
-//                }
+                }
             }
         }, 2000);
 

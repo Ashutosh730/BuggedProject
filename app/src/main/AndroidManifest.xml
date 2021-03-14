@@ -19,7 +19,7 @@
         <activity android:name=".Payment" />
         <activity android:name=".Activity_RegisterNow" />
         <activity android:name=".Activity_UploadFile" />
-<!--        <activity android:name=".Activity_SubmitFile" />-->
+        <activity android:name=".Activity_SubmitFile" />
         <activity android:name=".Activity_Submit" />
         <activity android:name=".ForgotPassword"
             android:screenOrientation="portrait">
@@ -65,10 +65,10 @@
             android:name=".OnBoardingScreen1"
             android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic" />
-<!--        <activity-->
-<!--            android:name=".OnBoardingScreen"-->
-<!--            android:screenOrientation="portrait"-->
-<!--            android:theme="@style/Base.Theme.Mic" />-->
+        <activity
+            android:name=".OnBoardingScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.Mic" />
     </application>
 
 </manifest>

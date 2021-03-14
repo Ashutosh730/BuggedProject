@@ -173,7 +173,13 @@ public class Login extends AppCompatActivity {
                                 Gson gson = new Gson();
                                 String json = gson.toJson(loginResponse.getData());
                                 editor.putString("userdata", json);
+ //                               editor.putBoolean("isLoggedIn",true);
                                 editor.apply();
+                                SharedPreferences sharedpreferences1 = getSharedPreferences("logged", MODE_PRIVATE);
+                                SharedPreferences.Editor editor1 = sharedpreferences1.edit();
+                                editor1.putBoolean("logged",true);
+                                editor1.apply();
+
                             }else{
                                 //user account is not verified
                                 intent = new Intent(Login.this,EmailVerification.class);

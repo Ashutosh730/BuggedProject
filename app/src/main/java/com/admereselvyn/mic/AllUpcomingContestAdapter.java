@@ -56,14 +56,14 @@ public class AllUpcomingContestAdapter extends RecyclerView.Adapter<AllUpcomingC
         holder.item_contestSlot.setText(contestList.get(position).getV()+"");
         Picasso.with(context).load(contestList.get(position).getLinkToContestImg()).into(holder.item_contestImage);
 
-//        holder.parentHolder.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(context, Activity_RegisterNow.class);
-//                i.putExtra("ContestDetails", contestList.get(position));
-//                context.startActivity(i);
-//            }
-//        });
+        holder.parentHolder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, Activity_RegisterNow.class);
+                i.putExtra("ContestDetails", contestList.get(position));
+                context.startActivity(i);
+            }
+        });
 
     }
 

@@ -13,5 +13,5 @@ public interface Api {
     String getAllContestsUrl();
     String getAllContestVideosUploadedByUser(String id);
     String getAllContestsUserParticipated(String id);
-    String getUploadVideoToContest(String id);
+    String getUploadVideoToContest(String contestId ,String id);
 }

@@ -86,7 +86,8 @@ public class OnGoingContestFragment extends Fragment {
                                     contest.setStartContest(jsonObject.getString("start_contest"));
                                     contest.setEndContest(jsonObject.getString("end_contest"));
                                     contest.setFees(jsonObject.getInt("fees"));
-                                    contest.setV(jsonObject.getInt("_v"));
+                                    contest.setV(jsonObject.getInt("__v"));
+                                    contest.setId(jsonObject.getString("_id"));
 
                                     // Adding fetched data to the contestList variable
                                     contestList.add(contest);

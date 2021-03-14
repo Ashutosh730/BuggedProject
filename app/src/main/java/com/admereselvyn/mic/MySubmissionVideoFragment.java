@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import static android.content.Context.MODE_PRIVATE;
 
 public class MySubmissionVideoFragment extends Fragment {
+    private static final String TAG = "MySubmissionVideoFragme";
     RecyclerView recyclerView;
     RequestQueue queue;
 
@@ -61,6 +62,7 @@ public class MySubmissionVideoFragment extends Fragment {
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
+                                Log.d(TAG, "onResponse: " + response);
                                 try {
                                     String status=response.getString("status");
                                     if(status.equals("success"))
